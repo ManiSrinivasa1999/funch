@@ -8,6 +8,24 @@
   </div>
 </template>
 
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import { dom } from '@fortawesome/fontawesome-svg-core';
+
+@Component({
+  components: {
+  },
+})
+export default class App extends Vue {
+  mounted() {
+    this.$nextTick(() => {
+      dom.watch();
+    });
+  }
+}
+
+</script>
+
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
